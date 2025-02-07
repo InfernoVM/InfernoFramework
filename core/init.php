@@ -3,7 +3,7 @@
 	define("rootsec", "true");
 	/////////////////////////////////////////////////////////////////////////////////////////
 	if (session_status() == PHP_SESSION_NONE) {
-    	session_start();
+    		session_start();
 	}
 	/////////////////////////////////////////////////////////////////////////////////////////
 	require_once($_SERVER["DOCUMENT_ROOT"]. '/core/classes/lang.class.php');
@@ -21,7 +21,7 @@
 	$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 	$dotenv->load();
 	/////////////////////////////////////////////////////////////////////////////////////////
-    if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    	if ($_SERVER['HTTP_HOST'] == 'localhost') {
 		define("DB_HOST", $_ENV['DB_HOST_LOCAL']);
 		define("DB_USER", $_ENV['DB_USER_LOCAL']);
 		define("DB_PASS", $_ENV['DB_PASS_LOCAL']);
