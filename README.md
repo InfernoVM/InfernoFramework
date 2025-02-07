@@ -4,7 +4,7 @@ InfernoFramework is a blazing-fast, lightweight, and highly extensible PHP frame
 
 <p align="center">
   <a href="https://infernovm.net">
-    <img width="160" height="50" src="https://i.imgur.com/l5cRB9s.gif" alt="InfernoVM">
+    <img src="https://i.imgur.com/l5cRB9s.gif" alt="InfernoVM">
   </a>
 </p>
 

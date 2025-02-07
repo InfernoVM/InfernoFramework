@@ -1,0 +1,8 @@
+{
+    "config": {
+      "vendor-dir": "core/libs"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+  }
