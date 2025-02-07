@@ -39,5 +39,7 @@
 
 	$Helper = new Helper($DataBase);
 	$SiteConfig = new SiteConfig($DataBase);
+	$UserManager = new UserManager($DataBase, $_LANG, $SiteConfig->getGoogleRecaptchaSecretKey());
+
 	//////////////////////////////////////////////////////////////////////////////////////////	
 ?>
