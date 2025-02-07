@@ -28,7 +28,7 @@ if (isset($_GET['action'])) {
             $response = $UserManager->forgotPassword($email, $recaptchaResponse);
         break;
         case 'updateEmail':
-            $Helper->isUserLoggedIn();
+            $UserManager->isUserLoggedIn();
 
             $userId = $requestData['userid'] ?? '';
             $oldEmail = $requestData['oldEmail'] ?? '';
@@ -37,7 +37,7 @@ if (isset($_GET['action'])) {
             $response = $UserManager->updateEmail($userId, $oldEmail, $newEmail);
         break;
         case 'updatePassword':
-            $Helper->isUserLoggedIn();
+            $UserManager->isUserLoggedIn();
 
             $UserID = $_SESSION['user_id'];
             $oldPassword = $requestData['oldPassword'] ?? '';
@@ -46,7 +46,7 @@ if (isset($_GET['action'])) {
             $response = $UserManager->updatePassword($userId, $oldPassword, $newPassword);
         break;
         case 'updateTheme':
-            $Helper->isUserLoggedIn();
+            $UserManager->isUserLoggedIn();
 
             $UserID = $_SESSION['user_id'];
             $Theme = $requestData['theme'] ?? '';
