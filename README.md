@@ -10,6 +10,7 @@ InfernoFramework is a blazing-fast, lightweight, and highly extensible PHP frame
 
 
 ## 🔥 Key Features
+
 - **Lightweight & Fast** – Optimized for speed and performance
 - **Automatic Class Loading** – No manual includes, just create and use
 - **Secure & Scalable** – Built with security best practices in mind
@@ -17,12 +18,16 @@ InfernoFramework is a blazing-fast, lightweight, and highly extensible PHP frame
 - **Extensible** – Easily add new functionalities with minimal effort
 
 ## 🚀 Installation & Setup
+
 1. **Install Dependencies with Composer:**
+   
    ```sh
    composer install
    ```
-2. **Configure Environment Variables:**
+3. **Configure Environment Variables:**
+   
    Edit the `/core/.env` file to set up your database and environment settings:
+   
    ```env
    DB_HOST_LOCAL=your_localhost
    DB_USER_LOCAL=your_local_user
@@ -37,12 +42,15 @@ InfernoFramework is a blazing-fast, lightweight, and highly extensible PHP frame
 
 ## 🔧 Framework Initialization
 InfernoFramework initializes automatically via `/core/init.php`, which:
+
 - Loads environment variables from `.env`
 - Sets up database configurations (local or remote)
 - Automatically loads classes from `/core/classes/`
 
 ## 🛠 Adding New Classes
+
 To extend the framework, follow these simple steps:
+
 1. **Create a New Class File:** Place it inside `/core/classes/`, following the naming convention `ClassName.class.php`.
 2. **Define Your Class:**
    ```php
@@ -58,12 +66,15 @@ To extend the framework, follow these simple steps:
    }
    ?>
    ```
+   
 3. **Start Using Your Class Immediately** – The framework’s autoloader will handle it.
 
 ## 📌 Usage Guide
 ### 🔹 Helper Class
 The `Helper` class provides essential utility functions to streamline development.
+
 #### Example Usage:
+
 ```php
 $Helper = new Helper($DataBase);
 
@@ -105,9 +116,11 @@ $response = $UserManager->forgotPassword("email@example.com", "recaptcha_token")
 ```
 
 ## 🌐 API Handling with `api.php`
+
 InfernoFramework includes an `api.php` file that handles API requests through structured classes. The API allows secure interaction with user management features such as login, registration, password reset, and account updates.
 
 ## 🌍 URL Routing
+
 InfernoFramework uses an `.htaccess` file for clean URL routing and API endpoint handling:
 This ensures:
 
@@ -120,5 +133,6 @@ This ensures:
 
 
 ## 🔗 Get Started Today!
+
 Start building with InfernoFramework and experience the power of a fast, lightweight, and highly extensible PHP framework. If you need help, feel free to open an issue on GitHub. Join the growing community of developers who trust InfernoFramework for their projects! 🔥
 
