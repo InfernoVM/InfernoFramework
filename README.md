@@ -115,6 +115,50 @@ $response = $UserManager->login("email@example.com", "password123", "recaptcha_t
 $response = $UserManager->forgotPassword("email@example.com", "recaptcha_token");
 ```
 
+### 🔹 DataBase Class
+The `DataBase` class handles MySQL queries with secured prepared statements.
+
+#### Example Usage:
+```php
+// Query to fetch user data
+$query = "SELECT * FROM users WHERE id = :id";
+$DataBase->Query($query);
+
+// Bind parameters
+$id = 5;
+$DataBase->Bind(':id', $id, PDO::PARAM_INT);
+
+// Execute the query
+$DataBase->Execute();
+
+// Fetch all results
+$results = $DataBase->ResultSet();
+foreach ($results as $row) {
+    echo $row['name'] . "<br>";
+}
+
+// Get the number of affected rows
+$rowCount = $DataBase->RowCount();
+echo "Rows affected: " . $rowCount;
+
+// Get the last inserted ID
+$lastID = $DataBase->LastID();
+echo "Last inserted ID: " . $lastID;
+
+// Start a database transaction
+$DataBase->StartTransaction();
+
+// Insert new record
+$query = "INSERT INTO users (name, email) VALUES (:name, :email)";
+$DataBase->Query($query);
+$DataBase->Bind(':name', 'John Doe');
+$DataBase->Bind(':email', 'john.doe@example.com');
+$DataBase->Execute();
+
+// Commit the transaction
+$DataBase->EndTransaction();
+```
+
 ## 🌐 API Handling with `api.php`
 
 InfernoFramework includes an `api.php` file that handles API requests through structured classes. The API allows secure interaction with user management features such as login, registration, password reset, and account updates.
@@ -129,6 +173,8 @@ This ensures:
 - Automatic redirection to HTTPS and non-www version
 - Route for API is yourdomain.com/api/action - api.php
 - Route for Views / Pages is yourdomain.com/page - index.php
+
+<?php 
 
 
 
