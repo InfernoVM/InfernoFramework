@@ -1,4 +1,11 @@
 <?php
+/************************************************
+ *  InfernoFramework  
+ *  https://github.com/InfernoVM/InfernoFramework  
+ *  
+ *  Powered by InfernoVM  
+ *  Fast, Secure, and Reliable PHP Framework  
+ ************************************************/
 require_once($_SERVER["DOCUMENT_ROOT"] . '/core/init.php');
 
 define('PAGES_PATH', __DIR__ . '/core/pages/');
