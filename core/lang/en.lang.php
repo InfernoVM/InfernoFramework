@@ -1,4 +1,12 @@
 <?php 
+/************************************************
+ *  InfernoFramework  
+ *  https://github.com/InfernoVM/InfernoFramework  
+ *  
+ *  Powered by InfernoVM  
+ *  Fast, Secure, and Reliable PHP Framework  
+ ************************************************/
+
 $_LANG = array();
 
 $_LANG["database"]["failedconn"] = "Database connection failed: ";
